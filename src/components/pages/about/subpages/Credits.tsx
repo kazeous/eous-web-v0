@@ -2,9 +2,7 @@ import {Container} from "../../../ui/Container.tsx";
 
 export function Credits() {
     const credits: ({ name: string; link: string })[] = [
-        {name: "Kyzer", link: "https://kyzer.xyz/"},
-        {name: "NerdyWoffy", link: "https://nerdywoffy.me/"},
-        {name: "GodBirdArt", link: "https://godbirdart.com/"},
+        {name: "Alcor", link: "https://www.septentrion.dev/#/"},
         {name: "Material You", link: "https://m3.material.io"},
         {name: "BeerCSS", link: "https://www.beercss.com/"}
     ]

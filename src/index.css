@@ -13,6 +13,36 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+body.light {
+    background:
+        radial-gradient(at 20% 0%, rgb(160 206 248 / 25%), transparent 50%),
+        radial-gradient(at 80% 10%, rgb(120 182 240 / 18%), transparent 40%),
+        radial-gradient(at 50% 60%, rgb(196 224 252 / 12%), transparent 50%),
+        linear-gradient(
+            180deg,
+            #e0f0ff 0%,
+            #f0f8ff 30%,
+            #e0f0ff 60%,
+            #c4e0fc 100%
+        );
+    background-attachment: fixed;
+}
+
+body.light .app {
+    background: transparent !important;
+}
+
+body.light .content {
+    background: rgb(255 255 255 / 72%) !important;
+    box-shadow: 0 1rem 3rem rgb(16 42 95 / 10%);
+    backdrop-filter: blur(24px) saturate(1.15);
+}
+
+body.light .app > nav {
+    background: rgb(224 240 255 / 68%) !important;
+    backdrop-filter: blur(24px) saturate(1.2);
+}
+
 @font-face {
     font-family: 'Potra';
     /*noinspection CssInvalidPropertyValue*/

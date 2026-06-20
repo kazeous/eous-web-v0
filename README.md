@@ -1,6 +1,6 @@
-# septentrion.dev
+# kazeous.com
 
-This is the repository for Alcor's personal website! To run this locally, you can follow the following steps:
+This is the repository for Kaze's personal website! To run this locally, you can follow the following steps:
 
 1. Clone this repository.
 2. Install the npm dependencies in both the root folder and the `api` folder using `npm i`.
@@ -8,7 +8,7 @@ This is the repository for Alcor's personal website! To run this locally, you ca
 
 ```dotenv
 AWS_ACCESS_KEY_ID='Your AWS Access Key'
-AWS_SECRET_ACCESS_KEY='The secret key for the S3 bucket that contains your images 
+AWS_SECRET_ACCESS_KEY='The secret key for the S3 bucket that contains your images' 
 BUCKET_NAME='The name of the S3 bucket that contains your images'
 PORT=9000
 NODE_ENV=development

@@ -4,7 +4,7 @@ import 'react-calendar-heatmap/dist/styles.css';
 import {useDocumentTitle} from "usehooks-ts";
 import {Container} from "../../ui/Container.tsx";
 import {useTagHooks} from "../../../hooks/useTagHooks.ts";
-import './analytics.css'
+import './heatmap.css'
 import {Tooltip} from "react-tooltip";
 
 export const AnalyticsPage = memo(function AnalyticsPage() {

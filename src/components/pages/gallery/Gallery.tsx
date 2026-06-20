@@ -25,7 +25,7 @@ export function Gallery() {
 
     const pageSize = 4;
 
-    useDocumentTitle("Gallery - septentrion.dev");
+    useDocumentTitle("Gallery - kazeous.com");
 
     const displayedImages = images.filter(value => filters.doesImageMatch(value, filterMode)).sort((a, b) => b.published.localeCompare(a.published))
     const yearMonthPairs = Array.from(new Set(displayedImages.map(value => value.published.substring(0, 7)))).sort((a, b) => b.localeCompare(a));

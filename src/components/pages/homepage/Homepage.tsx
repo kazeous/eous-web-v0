@@ -8,7 +8,7 @@ import "./homepage.css"
 import {Container} from "../../ui/Container.tsx";
 
 export function Homepage() {
-    useDocumentTitle("septentrion.dev");
+    useDocumentTitle("kazeous.com");
 
     return <>
         {useIsMobile() && <div style={{position: "absolute", right: "1rem", top: "1rem"}}><ModeToggle className={clsx("transparent circle")}/></div>}

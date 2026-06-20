@@ -5,31 +5,13 @@ import Markdown from "react-markdown";
 export function Changelog() {
     const entries: {version: string, date: Date, description: string}[] = [
         {
-            version: "2.1.0",
-            date: new Date(2025, 4, 3),
+            version: "0.1.1",
+            date: new Date(2026, 6, 20),
             // language=Markdown
-            description: `Start of old-web revival project!
-- Add new pages to "About" page
-  - List of Vanguard decks
-  - Revamped about
-  - Added Astral Wave into
-  - Mobile friendly navigation drawer
+            description: `Trying to make something different!
+- Modify light theme color
 - Start maintaining a changelog`
         },
-        {
-            version: "2.1.1",
-            date: new Date(2025, 4, 22),
-            // language=Markdown
-            description: `- Add minimum width to analytics heatmap to display better on mobile
-- Fix tooltip rendering`
-        },
-        {
-            version: "2.1.2",
-            date: new Date(2025, 4, 24),
-            // language=Markdown
-            description: `- Change font to Outfit
-- Minor spelling fixes`
-        }
     ]
     return <Container className={"fade"}>
         <h2 className={"primary-text"}>Changelog</h2>

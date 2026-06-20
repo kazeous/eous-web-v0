@@ -1,14 +1,14 @@
 export function ProfileInfo() {
     return <>
         <h1 className={"primary-text"} style={{fontFamily: "Potra"}}>
-            Alcor
+            Kaze
         </h1>
         <q>
-            Cougar-dragon doing his best! ✨
+            ✨ A Dragon-Shark wandering on a path.
         </q>
         <br/>
         <strong>
-            Software Engineer 👨‍💻 ◈ TTRPG Enthusiast 🎲 ◈ CFVG Player 🎴
+            amateur at everything!
         </strong>
     </>;
 }
