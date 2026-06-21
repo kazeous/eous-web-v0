@@ -379,7 +379,7 @@
       "Sketch"
     ],
     "href": "",
-    "published": "2026-06-21",
+    "published": "2026-04-14",
     "aspectRatio": 0.75,
     "rating": "general",
     "characters": [
@@ -390,5 +390,120 @@
     "webp": "https://kaze-art0-bucket.s3.amazonaws.com/webp/a_little_tired.webp",
     "id": "5a0623f2b841df1ac7e50cce0a566a614ebb014db9442450d8765024",
     "nearLossless": "https://kaze-art0-bucket.s3.amazonaws.com/near_lossless/a_little_tired.webp"
+  },
+  {
+    "title": "Sticker set 01",
+    "artist": "Khánh Linh",
+    "tags": [
+      "Chibi"
+    ],
+    "href": "https://www.facebook.com/share/17CdDo5zbz/",
+    "published": "2026-04-27",
+    "aspectRatio": 1,
+    "rating": "general",
+    "characters": [
+      "Yoichi"
+    ],
+    "src": "https://kaze-art0-bucket.s3.amazonaws.com/sticker_set_01.png",
+    "thumbnailUrl": "https://kaze-art0-bucket.s3.amazonaws.com/thumbnail/sticker_set_01.webp",
+    "webp": "https://kaze-art0-bucket.s3.amazonaws.com/webp/sticker_set_01.webp",
+    "id": "c93d43bc8cc2ed38bcf520e78d28ba87bb83485289ad863b05fed010",
+    "nearLossless": "https://kaze-art0-bucket.s3.amazonaws.com/near_lossless/sticker_set_01.webp"
+  },
+  {
+    "title": "Sticker set 02",
+    "artist": "Khánh Linh",
+    "tags": [
+      "Chibi"
+    ],
+    "href": "",
+    "published": "2026-04-27",
+    "aspectRatio": 1,
+    "rating": "general",
+    "characters": [
+      "Yoichi"
+    ],
+    "src": "https://kaze-art0-bucket.s3.amazonaws.com/sticker_set_02.png",
+    "thumbnailUrl": "https://kaze-art0-bucket.s3.amazonaws.com/thumbnail/sticker_set_02.webp",
+    "webp": "https://kaze-art0-bucket.s3.amazonaws.com/webp/sticker_set_02.webp",
+    "id": "15dd98474205538299566211badc4257d47ca9ecb7f5a8d1f327d258",
+    "nearLossless": "https://kaze-art0-bucket.s3.amazonaws.com/near_lossless/sticker_set_02.webp"
+  },
+  {
+    "title": "Sticker set 03",
+    "artist": "Khánh Linh",
+    "tags": [
+      "Chibi"
+    ],
+    "href": "",
+    "published": "2026-04-27",
+    "aspectRatio": 1,
+    "rating": "general",
+    "characters": [
+      "Yoichi"
+    ],
+    "src": "https://kaze-art0-bucket.s3.amazonaws.com/sticker_set_03.png",
+    "thumbnailUrl": "https://kaze-art0-bucket.s3.amazonaws.com/thumbnail/sticker_set_03.webp",
+    "webp": "https://kaze-art0-bucket.s3.amazonaws.com/webp/sticker_set_03.webp",
+    "id": "5e5285112c2c395f8c2a4480c1cf02122a8f356b2caad661d2436d89",
+    "nearLossless": "https://kaze-art0-bucket.s3.amazonaws.com/near_lossless/sticker_set_03.webp"
+  },
+  {
+    "title": "Sticker set 04",
+    "artist": "Khánh Linh",
+    "tags": [
+      "Chibi"
+    ],
+    "href": "",
+    "published": "2026-04-27",
+    "aspectRatio": 1,
+    "rating": "general",
+    "characters": [
+      "Yoichi"
+    ],
+    "src": "https://kaze-art0-bucket.s3.amazonaws.com/sticker_set_04.png",
+    "thumbnailUrl": "https://kaze-art0-bucket.s3.amazonaws.com/thumbnail/sticker_set_04.webp",
+    "webp": "https://kaze-art0-bucket.s3.amazonaws.com/webp/sticker_set_04.webp",
+    "id": "c3f25360fbbe4d1da35dbbc0312461f178476f935cf2e4798d5d80f6",
+    "nearLossless": "https://kaze-art0-bucket.s3.amazonaws.com/near_lossless/sticker_set_04.webp"
+  },
+  {
+    "title": "Sticker set 05",
+    "artist": "Khánh Linh",
+    "tags": [
+      "Chibi"
+    ],
+    "href": "",
+    "published": "2026-04-27",
+    "aspectRatio": 1,
+    "rating": "general",
+    "characters": [
+      "Yoichi"
+    ],
+    "src": "https://kaze-art0-bucket.s3.amazonaws.com/sticker_set_05.png",
+    "thumbnailUrl": "https://kaze-art0-bucket.s3.amazonaws.com/thumbnail/sticker_set_05.webp",
+    "webp": "https://kaze-art0-bucket.s3.amazonaws.com/webp/sticker_set_05.webp",
+    "id": "06c7b619258325a5af929889773c0552d51b6aa19e5c4bf3b5c5dc62",
+    "nearLossless": "https://kaze-art0-bucket.s3.amazonaws.com/near_lossless/sticker_set_05.webp"
+  },
+  {
+    "title": "Snack after class?",
+    "artist": "bihaicau",
+    "tags": [
+      "Half Body",
+      "Illustration"
+    ],
+    "href": "",
+    "published": "2024-06-05",
+    "aspectRatio": 1.414516129032258,
+    "rating": "general",
+    "characters": [
+      "Yoichi"
+    ],
+    "src": "https://kaze-art0-bucket.s3.amazonaws.com/snack_after_class.jpg",
+    "thumbnailUrl": "https://kaze-art0-bucket.s3.amazonaws.com/thumbnail/snack_after_class.webp",
+    "webp": "https://kaze-art0-bucket.s3.amazonaws.com/webp/snack_after_class.webp",
+    "id": "3d4253147a3abd071ebf74d3a213a17577dfec5c76de68d74d1b56ef",
+    "nearLossless": "https://kaze-art0-bucket.s3.amazonaws.com/near_lossless/snack_after_class.webp"
   }
 ]

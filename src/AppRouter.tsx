@@ -8,6 +8,7 @@ import {OCList} from "./components/pages/lore/OCList.tsx";
 import {AboutMe} from "./components/pages/about/subpages/AboutMe.tsx";
 import {Changelog} from "./components/pages/about/subpages/Changelog.tsx";
 import {Credits} from "./components/pages/about/subpages/Credits.tsx";
+import {Projects} from "./components/pages/projects/Projects.tsx";
 import type {JSX} from "react";
 
 export const aboutSubRoutes: {path: string, name: string, element: JSX.Element}[] = [
@@ -28,6 +29,7 @@ export function AppRouter() {
             <Route index element={<Gallery/>}/>
             <Route path=":id" element={<Artwork/>}/>
         </Route>
+        <Route path="/projects" element={<Projects/>}/>
         <Route path="/lore" element={<OCList/>}/>
     </Routes>;
 }

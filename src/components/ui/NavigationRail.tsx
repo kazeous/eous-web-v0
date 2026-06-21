@@ -30,6 +30,10 @@ export function NavigationRail() {
             icon: "photo_album"
         },
         {
+            path: "projects",
+            icon: "terminal"
+        },
+        {
             path: "about",
             icon: "account_circle"
         },
