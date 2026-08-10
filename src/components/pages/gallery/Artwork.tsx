@@ -31,7 +31,7 @@ export function Artwork() {
                 <Link to={{pathname: '/gallery', search: searchParams.toString()}}>
                     <button className="transparent circle"><i>arrow_back</i></button>
                 </Link>
-                <h4 className={"secondary-text no-margin"} style={{fontFamily: "Outfit Variable"}}>
+                <h4 className="secondary-text no-margin">
                     {parentImage?.title}
                 </h4>
             </div>

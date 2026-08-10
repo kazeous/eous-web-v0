@@ -12,17 +12,20 @@ yea idk what to write here yet
     
 will comeback after I can think of some    
 `;
-    return <Container className={"fade"}>
-        <div className={"grid medium-space"}>
-            <div className={"m6 s12"}>
-                <h2 className={"primary-text"}>About Me (IRL)</h2>
+    return <Container className="about-page fade">
+        <div className="about-intro-grid">
+            <div className="about-copy">
+                <h1>About Me (IRL)</h1>
                 <div className={"large-text"}>
                     <Markdown>
                         {intro}
                     </Markdown>
                 </div>
             </div>
-            <img alt={"me and Alcor"} src={moodboard} style={{width: "100%", objectFit: "contain"}} className={"m6 s12"}/>
+            <figure className="about-portrait">
+                <img alt="Vu with Alcor" src={moodboard}/>
+                <figcaption>Vu / Kaze</figcaption>
+            </figure>
         </div>
     </Container>
     ;

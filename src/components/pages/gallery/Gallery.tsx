@@ -12,6 +12,7 @@ import type {ImageInformation} from "../../../../api/src/images/ImageInformation
 import {RadioGroup} from "../../ui/RadioGroup.tsx";
 import {GalleryImage} from "./GalleryImage.tsx";
 import {useIsDevelopment} from "../../../hooks/useIsDevelopment.ts";
+import "./gallery.css";
 
 export function Gallery() {
     const {images, altData, filters} = useTagHooks();
@@ -33,10 +34,13 @@ export function Gallery() {
     const imagesForMonth: { [monthYear: string]: ImageInformation[] } = displayedImages.reduce<{ [monthYear: string]: ImageInformation[] }>((previousValue, currentValue) => ({...previousValue, [currentValue.published.substring(0, 7)]: (previousValue[currentValue.published.substring(0, 7)] ?? []).concat(currentValue)}), {})
 
     return <>
-        <Container className={"fade"}>
+        <Container className="gallery-page fade">
             <div ref={ref}></div>
-            <h1 className={"primary-text"}>Gallery</h1>
-            <fieldset className={"bottom-margin"}>
+            <header className="gallery-header">
+                <h1>Gallery</h1>
+                <p>Artwork arranged by date, tags, and alternate versions.</p>
+            </header>
+            <fieldset className="gallery-filters">
                 <legend>Filter Settings</legend>
                 <RadioGroup value={filterMode} setValue={setFilterMode} options={["and", "or"]} label={"Filter Mode"}/>
                 <GallerySearchbar/>
@@ -45,15 +49,15 @@ export function Gallery() {
             </fieldset>
             {(displayMode === "paginated" || displayMode === "monthly") && displayedMonths.map(value => {
                 const imagesInMonth = imagesForMonth[value]
-                return <>
-                    <h4>{value}</h4>
+                return <section key={value} className="gallery-month">
+                    <h2 className="gallery-date">{value}</h2>
                     <JustifiedGrid aspectRatioList={imagesInMonth.map(image => image.aspectRatio)} width={bounds.width}>
-                        {imagesInMonth.map(value => <GalleryImage value={value}  searchParams={searchParams.toString()} hasAlts={altData.has(value.title)}/>)}
+                        {imagesInMonth.map(value => <GalleryImage key={value.id} value={value} searchParams={searchParams.toString()} hasAlts={altData.has(value.title)}/>)}
                     </JustifiedGrid>
-                </>;
+                </section>;
             })}
             {displayMode === "all" && <JustifiedGrid aspectRatioList={displayedImages.map(value => value.aspectRatio)} width={bounds.width} targetRowHeight={350}>
-                {displayedImages.map(value => <GalleryImage value={value}  searchParams={searchParams.toString()} hasAlts={altData.has(value.title)}/>)}
+                {displayedImages.map(value => <GalleryImage key={value.id} value={value} searchParams={searchParams.toString()} hasAlts={altData.has(value.title)}/>)}
             </JustifiedGrid>}
         </Container>
         {isDevelopment && <ArtworkUploader variant={"parent"}/>}

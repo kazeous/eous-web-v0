@@ -22,22 +22,6 @@ const GITHUB_USERNAME = "kazeous";
 const GITHUB_REPOSITORIES_URL =
     `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=pushed&direction=desc&per_page=100`;
 
-const languageColors: Record<string, string> = {
-    TypeScript: "#3178c6",
-    JavaScript: "#f1e05a",
-    Python: "#3572a5",
-    Java: "#b07219",
-    Kotlin: "#a97bff",
-    "C#": "#178600",
-    "C++": "#f34b7d",
-    C: "#555555",
-    Rust: "#dea584",
-    Go: "#00add8",
-    HTML: "#e34c26",
-    CSS: "#663399",
-    Vue: "#41b883",
-};
-
 function formatUpdatedDate(date: string) {
     return new Intl.DateTimeFormat("en", {
         year: "numeric",
@@ -49,11 +33,8 @@ function formatUpdatedDate(date: string) {
 function ProjectCard({project}: Readonly<{ project: GitHubRepository }>) {
     return <article className="project-card">
         <div className="project-card-heading">
-            <div className="project-icon surface-container-high">
-                <i>code</i>
-            </div>
             <div>
-                <h3>{project.name}</h3>
+                <h2>{project.name}</h2>
                 {project.archived && <span className="chip small no-margin">Archived</span>}
             </div>
         </div>
@@ -73,7 +54,6 @@ function ProjectCard({project}: Readonly<{ project: GitHubRepository }>) {
                 {project.language && <span>
                     <span
                         className="language-dot"
-                        style={{backgroundColor: languageColors[project.language] ?? "var(--primary)"}}
                     />
                     {project.language}
                 </span>}
@@ -157,18 +137,17 @@ export function Projects() {
     return <Container className="projects-page fade">
         <header className="projects-header">
             <div>
-                <span className="projects-eyebrow">Things I build</span>
-                <h1 className="primary-text">Projects</h1>
+                <h1>Projects</h1>
                 <p>Code experiments, tools, and other things I have been tinkering with.</p>
             </div>
             <a
                 href={`https://github.com/${GITHUB_USERNAME}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button border round"
+                className="button border"
             >
-                <i>code</i>
                 <span>GitHub</span>
+                <span aria-hidden="true">↗</span>
             </a>
         </header>
 
@@ -180,7 +159,7 @@ export function Projects() {
                 href={`https://github.com/${GITHUB_USERNAME}?tab=repositories`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button primary round"
+                className="button primary"
             >
                 View repositories
             </a>

@@ -50,7 +50,7 @@ export function BeerCSSTextField(props: (InputProps | TextareaProps) & HelperOrE
 
     return <div className={className}>
         {props.inputPrefix}
-        {props.multiline ? <textarea {..._.omit(props, ['label', 'inputSize', 'inputPrefix', 'inputSuffix', 'addMargin', 'helperText'])} className={clsx(props.className, props.placeholder && "active")}/> : <input {..._.omit(props as InputProps, ['label', 'inputSize', 'inputPrefix', 'inputSuffix', 'addMargin', 'helperText'])} className={clsx(props.className, props.placeholder && "active")}/>}
+        {props.multiline ? <textarea {..._.omit(props, ['label', 'inputSize', 'inputPrefix', 'inputSuffix', 'addMargin', 'helperText', 'errorText'])} className={clsx(props.className, props.placeholder && "active")}/> : <input {..._.omit(props as InputProps, ['label', 'inputSize', 'inputPrefix', 'inputSuffix', 'addMargin', 'helperText', 'errorText'])} className={clsx(props.className, props.placeholder && "active")}/>}
         {"type" in props && props.type === 'file' && <input type={"text"}/>}
         <label className={clsx(props.placeholder && "active")}>{props.label}</label>
         {props.inputSuffix}

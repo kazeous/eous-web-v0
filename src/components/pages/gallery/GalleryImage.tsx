@@ -6,7 +6,7 @@ export function GalleryImage(props: { value: ImageInformation, searchParams: str
     return <SkeletonImage src={props.value.thumbnailUrl} skeletonStyle={{aspectRatio: props.value.aspectRatio}}>
         <Link to={{pathname: props.value.id, search: "?" + props.searchParams.toString()}} style={{display: "contents"}}>
             <img alt={props.value.title} src={props.value.thumbnailUrl}/>
-            {props.hasAlts && <button className="absolute circle secondary-container" style={{right: 8, top: 8, opacity: .75}}>
+            {props.hasAlts && <button className="gallery-alt-button absolute secondary-container" aria-label="Artwork has alternate versions">
                 <i>more</i>
             </button>}
         </Link>

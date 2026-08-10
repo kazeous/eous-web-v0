@@ -42,7 +42,7 @@ export function GalleryPagination(props: { page: number, setPage: (page: number)
         props.maxPages]
 
 
-    return <nav className={`group connected bottom-align no-margin ${props.className}`} style={{height: "100%", ...props.style, marginBottom: "1rem"}}>
-        {renderedPages.map((value, index, array) => typeof value === "number" ? <button onClick={() => props.setPage(value)} className={clsx("circle", props.page === value ? "active" : "border", index === 0 ? "left-round" : index === array.length - 1 ? "right-round" : "no-round")}>{value}</button> : <button disabled style={{cursor: "text"}} className={clsx("circle", "transparent", index === 0 ? "left-round" : index === array.length - 1 ? "right-round" : "no-round")}>...</button>)}
+    return <nav className={`gallery-pagination bottom-align no-margin ${props.className}`} style={props.style} aria-label="Gallery pages">
+        {renderedPages.map((value, index) => typeof value === "number" ? <button key={`${value}-${index}`} onClick={() => props.setPage(value)} className={clsx("gallery-pagination-button", props.page === value ? "active" : "border")}>{value}</button> : <button key={`ellipsis-${index}`} disabled className="gallery-pagination-button transparent">…</button>)}
     </nav>;
 }

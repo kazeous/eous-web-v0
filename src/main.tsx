@@ -5,7 +5,7 @@ import App from './App.tsx'
 import "beercss";
 import "material-dynamic-colors";
 import '@fontsource/monomaniac-one';
-import '@fontsource-variable/outfit/wght.css';
+import '@fontsource-variable/inter/wght.css';
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>

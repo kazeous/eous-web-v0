@@ -1,21 +1,95 @@
-.lore-card {
-    display: block;
-    overflow: hidden;
-    aspect-ratio: 3 / 4;
-    border-radius: .75rem;
-    line-height: 0;
-    transition: box-shadow 150ms ease, transform 150ms ease;
+.lore-page {
+    width: 100%;
+    padding: var(--space-xl) var(--space-lg) var(--space-2xl) !important;
 }
 
-.lore-card:hover {
-    box-shadow: 0 0 0 2px var(--outline), 0 .35rem 1rem rgb(0 0 0 / 14%);
-    transform: translateY(-2px);
+.lore-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-md);
+    align-items: end;
+    padding-block-end: var(--space-xl);
+    border-bottom: var(--rule-hair) solid var(--color-rule);
+}
+
+.lore-header h1 {
+    margin: 0;
+    font-size: var(--text-display);
+    line-height: 1;
+}
+
+.lore-header p {
+    max-width: 65ch;
+    margin: 0;
+    color: var(--color-ink-2);
+    font-size: var(--text-md);
+}
+
+.lore-collection {
+    margin: 0 !important;
+    padding-block-start: var(--space-xl);
+}
+
+.lore-collection h2 {
+    margin: 0 0 var(--space-lg);
+    font-size: var(--text-2xl);
+}
+
+.lore-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    border-top: var(--rule-hair) solid var(--color-rule);
+    border-left: var(--rule-hair) solid var(--color-rule);
+}
+
+.lore-card {
+    display: grid;
+    min-width: 0;
+    overflow: hidden;
+    grid-template-rows: minmax(0, 1fr) auto;
+    border-right: var(--rule-hair) solid var(--color-rule);
+    border-bottom: var(--rule-hair) solid var(--color-rule);
+    border-radius: 0;
+    line-height: 0;
+    transition: background-color var(--dur-short) var(--ease-out);
+}
+
+.lore-card:hover,
+.lore-card:active {
+    background: var(--color-paper-2);
 }
 
 .lore-card-image {
     display: block;
     width: 100%;
-    height: 100%;
-    border-radius: inherit;
+    aspect-ratio: 3 / 4;
+    border-radius: 0;
     object-fit: cover;
+}
+
+.lore-card > span {
+    display: flex;
+    min-height: 3.5rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: var(--space-md);
+    border-top: var(--rule-hair) solid var(--color-rule);
+    line-height: 1;
+    white-space: nowrap;
+}
+
+@media (min-width: 48rem) {
+    .lore-header {
+        grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    }
+
+    .lore-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 40rem) {
+    .lore-page {
+        padding: var(--space-lg) var(--space-sm) var(--space-xl) !important;
+    }
 }

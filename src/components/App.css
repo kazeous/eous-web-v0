@@ -25,15 +25,15 @@
 }
 
 .fade {
-    animation: fade-in .45s ease-in-out;
+    animation: fade-in var(--dur-medium) var(--ease-out);
 }
 
 @keyframes fade-in {
-    0% {
+    from {
         opacity: 0;
     }
-    60% {
-        opacity: 0;
+    to {
+        opacity: 1;
     }
 }
 

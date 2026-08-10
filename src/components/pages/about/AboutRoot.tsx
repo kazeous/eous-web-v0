@@ -1,14 +1,12 @@
 import {useDocumentTitle} from "usehooks-ts";
 import {AboutSubnavigation} from "./AboutSubnavigation.tsx";
 import {Outlet} from "react-router";
-import {useIsMobile} from "../../../hooks/useIsMobile.ts";
 import './about.css'
 export function AboutRoot() {
     useDocumentTitle("About Me - kazeous.com");
-    const isMobile = useIsMobile();
-    return <div style={{display: !isMobile && "flex", height: "100%"}}>
+    return <div className="about-layout">
         <AboutSubnavigation/>
-        <div style={{width: '100%'}}>
+        <div className="about-content">
             <Outlet/>
         </div>
     </div>;

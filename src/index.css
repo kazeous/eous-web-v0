@@ -1,46 +1,26 @@
+/* Hallmark · global foundation · design-system: design.md · designed-as-app */
+@import "../tokens.css";
+
 :root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-
+    color-scheme: light;
+    color: var(--color-ink);
+    background: var(--color-paper);
+    font-family: var(--font-body);
     font-synthesis: none;
+    font-weight: 400;
+    line-height: 1.5;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-body.light {
-    background:
-        radial-gradient(at 20% 0%, rgb(160 206 248 / 25%), transparent 50%),
-        radial-gradient(at 80% 10%, rgb(120 182 240 / 18%), transparent 40%),
-        radial-gradient(at 50% 60%, rgb(196 224 252 / 12%), transparent 50%),
-        linear-gradient(
-            180deg,
-            #e0f0ff 0%,
-            #f0f8ff 30%,
-            #e0f0ff 60%,
-            #c4e0fc 100%
-        );
-    background-attachment: fixed;
-}
-
-body.light .app {
-    background: transparent !important;
-}
-
-body.light .content {
-    background: rgb(255 255 255 / 72%) !important;
-    box-shadow: 0 1rem 3rem rgb(16 42 95 / 10%);
-    backdrop-filter: blur(24px) saturate(1.15);
-}
-
-body.light .app > nav {
-    background: rgb(224 240 255 / 68%) !important;
-    backdrop-filter: blur(24px) saturate(1.2);
+html,
+body,
+#root {
+    min-height: 100%;
+    margin: 0;
+    overflow-x: clip;
+    background: var(--color-paper);
 }
 
 @font-face {
@@ -51,9 +31,10 @@ body.light .app > nav {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Monomaniac One', sans-serif;
+    font-family: var(--font-display);
+    font-style: normal;
 }
 
-span, div, b, button {
-    font-family: 'Outfit Variable', sans-serif;
+body, span, div, b, button, input, textarea, select {
+    font-family: var(--font-body);
 }
