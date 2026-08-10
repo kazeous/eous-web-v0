@@ -31,3 +31,6 @@ build
 !**/.env.example
 api/.env
 /api/src/routes/local_scripts/*
+
+# Local planning and agent working notes
+/docs/
