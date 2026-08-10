@@ -92,6 +92,8 @@ export function JustifiedGrid({
                         key={cell.childIndex === undefined ? `spacer-${cellIndex}` : `item-${cell.childIndex}`}
                         style={{
                             flex: row.length === 1 ? 1 : cell.aspectRatio,
+                            minWidth: 0,
+                            position: "relative",
                             ...containerStyle,
                         }}
                     >

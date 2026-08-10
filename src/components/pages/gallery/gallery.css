@@ -188,6 +188,12 @@
     border-radius: 0 !important;
 }
 
+.justified-row img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .gallery-alt-button {
     top: var(--space-xs) !important;
     right: var(--space-xs) !important;
