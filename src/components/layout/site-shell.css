@@ -131,23 +131,19 @@ body:has(.site-shell) {
 .site-social-links {
     display: flex;
     align-items: stretch;
-    justify-content: center;
+    justify-content: stretch;
     gap: 0;
     border-left: var(--rule-hair) solid var(--color-rule);
 }
 
 .site-header .site-social-links a {
     display: flex;
-    flex: 0 0 2.75rem;
+    min-width: 0;
+    flex: 1 1 0;
     min-height: 4.5rem;
     align-items: center;
     justify-content: center;
-    border-left: var(--rule-hair) solid var(--color-rule);
     line-height: 1;
-}
-
-.site-social-links a:last-child {
-    border-right: var(--rule-hair) solid var(--color-rule);
 }
 
 .site-social-links a:hover,

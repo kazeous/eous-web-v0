@@ -31,7 +31,12 @@ export function HybridDemo() {
     return <div className="hybrid-demo">
         <section className="hybrid-hero" aria-labelledby="hybrid-title">
                 <div className="hybrid-hero-copy">
-                    <h1 id="hybrid-title">Art, worlds<br/>and software.</h1>
+                    <div className="hybrid-hero-heading">
+                        <h1 id="hybrid-title">Art, worlds<br/>and software.</h1>
+                        <p className="hybrid-hero-note">
+                            amateur at everything✨software engineer👨‍💻game designer 🎲still trying xD
+                        </p>
+                    </div>
                     <div className="hybrid-hero-bottom">
                         <p>
                             Người ta vẫn thường nghĩ bình yên nằm ở cuối con đường. Nhưng đôi khi,

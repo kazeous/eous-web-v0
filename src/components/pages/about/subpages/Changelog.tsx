@@ -5,6 +5,11 @@ import Markdown from "react-markdown";
 export function Changelog() {
     const entries: {version: string, date: Date, description: string}[] = [
         {
+            version: "2.0",
+            date: new Date(2026, 7, 10),
+            description: "UI/UX redesign."
+        },
+        {
             version: "0.1.1",
             date: new Date(2026, 6, 20),
             // language=Markdown

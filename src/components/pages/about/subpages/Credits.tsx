@@ -7,7 +7,7 @@ export function Credits() {
         {name: "BeerCSS", link: "https://www.beercss.com/"}
     ]
     return <Container className={"fade"}>
-        <h2 className={"primary-text"}>Credits and Inspirations</h2>
+        <h2 className={"primary-text"}>Credits for v0.1</h2>
         Here's a list of people and concepts who I was inspired by when making this website!
         <ul>
             {credits.map(value => <li key={value.name}>

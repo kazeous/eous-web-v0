@@ -4,6 +4,16 @@
     "macrostructure": "Split Studio / Long Document",
     "theme": "studied-DNA",
     "enrichment": "user-owned artwork",
+    "brief": "Refine homepage tagline and social masthead, then expand About Me edge-to-edge",
+    "scope": "component-refinement",
+    "nav": "N9 edge-aligned grid masthead",
+    "footer": "Ft2"
+  },
+  {
+    "date": "2026-08-10",
+    "macrostructure": "Split Studio / Long Document",
+    "theme": "studied-DNA",
+    "enrichment": "user-owned artwork",
     "brief": "Kazeous site-wide migration from approved hybrid demo",
     "scope": "app",
     "nav": "N9 edge-aligned grid masthead",

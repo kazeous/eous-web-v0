@@ -1,5 +1,4 @@
 import moodboard from "../../../../assets/about.webp";
-import {Container} from "../../../ui/Container.tsx";
 import Markdown from "react-markdown";
 
 export function AboutMe() {
@@ -12,7 +11,7 @@ yea idk what to write here yet
     
 will comeback after I can think of some    
 `;
-    return <Container className="about-page fade">
+    return <div className="about-page fade">
         <div className="about-intro-grid">
             <div className="about-copy">
                 <h1>About Me (IRL)</h1>
@@ -27,6 +26,6 @@ will comeback after I can think of some
                 <figcaption>Vu / Kaze</figcaption>
             </figure>
         </div>
-    </Container>
+    </div>
     ;
 }

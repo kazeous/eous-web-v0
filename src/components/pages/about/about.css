@@ -1,3 +1,7 @@
+/* Hallmark · macrostructure: Split Studio · tone: technical-editorial · anchor hue: 232
+ * pre-emit critique: P5 H5 E5 S5 R5 V4 · contrast: pass (40–41)
+ * nav: N9 · footer: Ft2 · slop: pass (42–45) · mobile: pass (34, 49, 50–57)
+ */
 p.large {
     font-size: medium;
 }
@@ -45,26 +49,24 @@ p.large {
 }
 
 .about-page {
-    padding: var(--space-xl) var(--space-lg) var(--space-2xl) !important;
+    padding: 0 !important;
 }
 
 .about-intro-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    border-top: var(--rule-hair) solid var(--color-rule);
-    border-left: var(--rule-hair) solid var(--color-rule);
 }
 
 .about-copy,
 .about-portrait {
     min-width: 0;
     margin: 0;
-    border-right: var(--rule-hair) solid var(--color-rule);
     border-bottom: var(--rule-hair) solid var(--color-rule);
 }
 
 .about-copy {
     padding: var(--space-xl);
+    border-right: var(--rule-hair) solid var(--color-rule);
 }
 
 .about-copy h1 {
@@ -106,10 +108,6 @@ p.large {
 }
 
 @media (max-width: 40rem) {
-    .about-page {
-        padding: var(--space-lg) var(--space-sm) var(--space-xl) !important;
-    }
-
     .about-subnav {
         grid-template-columns: minmax(0, 1fr);
     }
@@ -125,6 +123,7 @@ p.large {
 
     .about-copy {
         padding: var(--space-lg);
+        border-right: 0;
     }
 
     .about-portrait img {
