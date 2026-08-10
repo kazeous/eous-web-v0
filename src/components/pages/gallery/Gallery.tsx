@@ -1,5 +1,5 @@
 import {Container} from "../../ui/Container.tsx";
-import {JustifiedGrid} from "react-justified-layout-ts";
+import {JustifiedGrid} from "./JustifiedGrid.tsx";
 import {useTagHooks} from "../../../hooks/useTagHooks.ts";
 import useMeasure from 'react-use-measure';
 import {GallerySearchbar} from "./GallerySearchbar.tsx";

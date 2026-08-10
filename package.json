@@ -1,7 +1,7 @@
 {
   "name": "kazeous-com",
   "private": true,
-  "version": "0.1.1",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,9 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@base-ui-components/react": "^1.0.0-rc.0",
     "@fontsource-variable/inter": "^5.2.8",
-    "@fontsource-variable/outfit": "^5.2.8",
     "@fontsource/monomaniac-one": "^5.2.7",
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
     "@fortawesome/free-brands-svg-icons": "7.0.1",
@@ -24,7 +22,6 @@
     "axios": "^1.16.1",
     "beercss": "^4.0.21",
     "clsx": "^2.1.1",
-    "date-fns": "^4.3.0",
     "dayjs": "^1.11.21",
     "filenamify": "^7.0.1",
     "lodash": "^4.18.1",
@@ -33,9 +30,8 @@
     "react-calendar-heatmap": "^1.10.0",
     "react-dom": "^19.2.6",
     "react-hook-form": "^7.76.1",
-    "react-justified-layout-ts": "^2.2.1",
-    "react-markdown": "^10.1.0",
     "react-multi-select-component": "^4.3.4",
+    "react-use-measure": "^2.1.7",
     "react-router": "^7.16.0",
     "react-router-dom": "^7.16.0",
     "react-toastify": "^11.1.0",

@@ -1,24 +1,16 @@
 import moodboard from "../../../../assets/about.webp";
-import Markdown from "react-markdown";
 
 export function AboutMe() {
-    // language=Markdown
-    let intro = `**Name**: Vu  
-**Country**: Viet Nam  
-**Hobbies**: Video Games, Novels
-
-yea idk what to write here yet
-    
-will comeback after I can think of some    
-`;
     return <div className="about-page fade">
         <div className="about-intro-grid">
             <div className="about-copy">
                 <h1>About Me (IRL)</h1>
                 <div className={"large-text"}>
-                    <Markdown>
-                        {intro}
-                    </Markdown>
+                    <p><strong>Name:</strong> Vu</p>
+                    <p><strong>Country:</strong> Viet Nam</p>
+                    <p><strong>Hobbies:</strong> Video Games, Novels</p>
+                    <p>yea idk what to write here yet</p>
+                    <p>will comeback after I can think of some</p>
                 </div>
             </div>
             <figure className="about-portrait">

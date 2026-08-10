@@ -8,20 +8,16 @@ export function SkeletonImage({children, debug = false, src, skeletonStyle}: { c
         return image.complete;
     }
 
-    async function loadImg() {
-        setIsReady(isImageCached());
-        return new Promise<void>((resolve) => {
-            const img = new Image();
-            img.src = src;
-            img.onload = () => resolve();
-        });
-    }
-
     useEffect(() => {
-        loadImg().then(() => {
+        const image = new Image();
+        const markReady = () => {
             setIsReady(true);
-        });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        };
+
+        image.addEventListener("load", markReady);
+        image.src = src;
+
+        return () => image.removeEventListener("load", markReady);
     }, [src]);
 
     if (isReady && !debug) {

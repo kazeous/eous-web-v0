@@ -1,29 +1,3 @@
-.app {
-    display: flex;
-    height: 100%;
-}
-
-
-.content {
-    margin-top: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 1rem;
-}
-
-@media (max-width:960px)  {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
-    .app {
-        flex-direction: column-reverse;
-        height: 100vh;
-    }
-    .content {
-        margin: 0;
-        border-radius: 0;
-        overflow-y: scroll;
-    }
-}
-
 .fade {
     animation: fade-in var(--dur-medium) var(--ease-out);
 }
@@ -51,15 +25,6 @@
     margin: 0 !important;
 }
 
-.gray {
-    color: var(--on-surface) !important;
-    font-size: 16px;
-}
-
-.no-gap {
-    gap: 0 !important;
-}
-
 @keyframes skeleton-animation {
     0% {
         opacity: 1;
@@ -76,36 +41,8 @@
     margin-top: 0 !important;
 }
 
-.hover-border {
-    padding: .5rem;
-    border: 2px solid transparent;
-}
-
-.hover-border:hover {
-    border-color: var(--outline);
-}
-
 .dropdown-heading {
     height: 48px !important;
-}
-
-.slide-right {
-    animation: slideInLeft .25s ease-out;
-}
-
-@keyframes slideInLeft {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    20% {
-        transform: translateX(-15%);
-        opacity: 1;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
 }
 
 body:has(:popover-open) *:is(#uploader) {

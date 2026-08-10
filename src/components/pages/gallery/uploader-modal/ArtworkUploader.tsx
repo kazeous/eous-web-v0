@@ -9,7 +9,7 @@ import {BeerCSSCheckbox} from "../../../ui/BeerCSSCheckbox.tsx";
 import axios from "axios";
 import {prepareFileName} from "../../../../../api/src/utils/utils.ts";
 import {toast, ToastContainer} from "react-toastify";
-import {Controller, useForm} from "react-hook-form";
+import {Controller, useForm, useWatch} from "react-hook-form";
 import type {ImageInformation} from "../../../../../api/src/images/ImageInformation.ts";
 import _ from "lodash";
 
@@ -46,7 +46,7 @@ type ParentProps = {
 
 export function ArtworkUploader(props: AltProps | ParentProps) {
     const {images, isImageHidden} = useTagHooks();
-    const {register, handleSubmit, control, watch, reset, formState: {isSubmitting}} = useForm<ImageValues>({
+    const {register, handleSubmit, control, reset, formState: {isSubmitting}} = useForm<ImageValues>({
         defaultValues: {
             tags: props.variant === "alt" ? props.parent.tags as ArtTag[] : [],
             characters: props.variant === "alt" ? props.parent.characters : ["Yoichi"],
@@ -56,12 +56,10 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
         },
     });
 
-    const watchTitle = watch("title");
-    const watchFile = watch("file");
-    const watchRating = watch("rating");
-    const watchAltType = watch("altType");
-    const watchArtist = watch("artist");
-    const watchHidden = watch("hidden");
+    const [watchTitle, watchFile, watchRating, watchAltType, watchArtist, watchHidden] = useWatch({
+        control,
+        name: ["title", "file", "rating", "altType", "artist", "hidden"],
+    });
     const isCollision = images.map(i => prepareFileName(i.title)).includes(prepareFileName(watchTitle));
 
     const onSubmit = async (data: ImageValues) => {

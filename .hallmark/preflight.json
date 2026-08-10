@@ -1,9 +1,9 @@
 {
   "date": "2026-08-10",
   "framework": "Vite 7 + React 19 + React Router 7",
-  "fonts": ["Potra", "Monomaniac One", "Outfit Variable", "Inter Variable"],
+  "fonts": ["Potra", "Monomaniac One", "Inter Variable"],
   "palette": "BeerCSS Material dynamic colors with #5793d1 theme anchor",
   "motion": "motion-cut; CSS keyframes only",
-  "spacing": "mixed rem scale; hybrid demo introduces a locked 4-point scale",
-  "scope": "site-wide hybrid art and software redesign"
+  "spacing": "locked 4-point scale with shared design tokens",
+  "scope": "site-wide v2 art and software portfolio"
 }

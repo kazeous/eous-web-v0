@@ -1,7 +1,7 @@
 import {useLocation} from "react-router";
 import {clsx} from "clsx";
 import {Link} from "react-router-dom";
-import {aboutSubRoutes} from "../../../AppRouter.tsx";
+import {aboutSubRoutes} from "./aboutRoutes.tsx";
 
 function LinkButton(props: Readonly<{ path: string, name: string, isActive: boolean }>) {
     return <Link to={`${props.path}`} className={clsx("about-subnav-link", props.isActive && "is-active")}>

@@ -41,9 +41,9 @@ export function Artwork() {
             <div className={"bottom-padding"}>
                 <h4 className={"bottom-margin tertiary-text"}>Tags</h4>
                 <nav style={{display: "flex", gap: "8px", overflowX: "scroll"}} className={"no-margin"}>
-                    {displayedImage?.tags.sort((a, b) => a.localeCompare(b)).map((value) => <button className={clsx("primary-container chip no-margin")}>{value}</button>)}
+                    {displayedImage?.tags.sort((a, b) => a.localeCompare(b)).map((value) => <button key={`tag-${value}`} className={clsx("primary-container chip no-margin")}>{value}</button>)}
                     <button className={clsx("secondary-container chip no-margin")}>{_.capitalize(displayedImage.rating)}</button>
-                    {displayedImage?.characters.map((value) => <button className={clsx("chip tertiary-container tertiary-border no-margin")}>{value}</button>)}
+                    {displayedImage?.characters.map((value) => <button key={`character-${value}`} className={clsx("chip tertiary-container tertiary-border no-margin")}>{value}</button>)}
                     <a target={"noreferrer noopener"} href={getHref(parentImage.artist)}>
                         <button className={"no-margin chip secondary-border"}>
                             <i>palette</i>{parentImage.artist}
@@ -57,7 +57,7 @@ export function Artwork() {
             {parentImage?.title && altData.get(parentImage?.title) && <div style={{blockSize: '12rem', display: "flex", flexDirection: "column"}} className={"bottom-padding"}>
                 <b className={"tertiary-text"}>Alts</b>
                 <nav style={{overflowX: "scroll"}}>
-                    {([parentImage] as ImageBase[]).concat(altData.get(parentImage?.title))?.map(value => <Link to={{pathname: `/gallery/${value.id}`, search: searchParams.toString()}} replace style={{display: "contents"}}><img src={value.thumbnailUrl} style={{height: "100%"}}/></Link>)}
+                    {([parentImage] as ImageBase[]).concat(altData.get(parentImage?.title))?.map(value => <Link key={value.id} to={{pathname: `/gallery/${value.id}`, search: searchParams.toString()}} replace style={{display: "contents"}}><img src={value.thumbnailUrl} alt="" style={{height: "100%"}}/></Link>)}
                 </nav>
             </div>}
         </Container>

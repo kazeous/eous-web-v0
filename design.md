@@ -1,6 +1,6 @@
 # Design — Kazeous
 
-A locked design system for this app. Every page uses the same flat, technical-editorial language derived from the approved hybrid demo.
+A locked design system for the v2 app. Every page uses the same flat, technical-editorial language established by the production interface.
 
 ## Genre
 

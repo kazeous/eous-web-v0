@@ -1,21 +1,12 @@
 import {Container} from "../../../ui/Container.tsx";
-import {format} from "date-fns";
-import Markdown from "react-markdown";
 
 export function Changelog() {
-    const entries: {version: string, date: Date, description: string}[] = [
+    const entries = [
         {
             version: "2.0",
-            date: new Date(2026, 7, 10),
+            date: "2026-08-10",
+            displayDate: "08/10/2026",
             description: "UI/UX redesign."
-        },
-        {
-            version: "0.1.1",
-            date: new Date(2026, 6, 20),
-            // language=Markdown
-            description: `Trying to make something different!
-- Modify light theme color
-- Start maintaining a changelog`
         },
     ]
     return <Container className={"fade"}>
@@ -24,10 +15,8 @@ export function Changelog() {
             {entries.map(value => <li key={value.version}>
                 <div>
                     <h3>{value.version}</h3>
-                    <time>{format(value.date, "MM/dd/yyyy")}</time>
-                    <Markdown>
-                        {value.description}
-                    </Markdown>
+                    <time dateTime={value.date}>{value.displayDate}</time>
+                    <p>{value.description}</p>
                 </div>
             </li>)}
         </ul>

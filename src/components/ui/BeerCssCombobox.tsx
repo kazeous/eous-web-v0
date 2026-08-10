@@ -22,7 +22,7 @@ export function BeerCssCombobox(props: Readonly<{ value: Option[], onChange: (se
             options={options}
             hasSelectAll={false}
             {...(!props.renderText && {valueRenderer: (selected) => selected.length ? <div>
-                    {selected.map(value1 => <button onClick={() => onChange(value.filter(value => value1.value !== value.value))} className="chip round tiny-margin">
+                    {selected.map(value1 => <button key={value1.value} onClick={() => onChange(value.filter(value => value1.value !== value.value))} className="chip round tiny-margin">
                         <span>{value1.label}</span>
                         <i>close</i>
                     </button>)
