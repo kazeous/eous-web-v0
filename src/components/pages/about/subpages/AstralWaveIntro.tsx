@@ -1,6 +1,7 @@
 import {Container} from "../../../ui/Container.tsx";
 import Markdown from "react-markdown";
-import cover from "../../lore/assets/splash/jupiter-splash.webp"
+
+const cover = "https://kaze-art0-bucket.s3.amazonaws.com/webp/morning.webp";
 
 export function AstralWaveIntro() {
     // language=Markdown

@@ -1,8 +1,23 @@
 import {Link} from "react-router-dom";
-import featuredArtwork from "../lore/assets/splash/aicore-splash-1.webp";
-import heroArtwork from "../lore/assets/splash/jupiter-splash.webp";
+import galleryEntries from "../../../../api/src/images/images.json";
+import {isImageInformation, type ImageEntry} from "../../../../api/src/images/ImageInformation.ts";
 import "./hybrid-demo.css";
 import {useDocumentTitle} from "usehooks-ts";
+
+const galleryArtwork = (galleryEntries as ImageEntry[]).filter(isImageInformation);
+
+function findGalleryArtwork(title: string) {
+    const artwork = galleryArtwork.find(image => image.title === title);
+
+    if (!artwork) {
+        throw new Error(`Gallery artwork not found: ${title}`);
+    }
+
+    return artwork;
+}
+
+const heroArtwork = findGalleryArtwork("A little tired");
+const featuredArtwork = findGalleryArtwork("C'mere");
 
 const indexLinks = [
     {label: "Art", to: "/gallery"},
@@ -16,7 +31,6 @@ export function HybridDemo() {
     return <div className="hybrid-demo">
         <section className="hybrid-hero" aria-labelledby="hybrid-title">
                 <div className="hybrid-hero-copy">
-                    <p className="hybrid-intro">A dragon-shark wandering on a path.</p>
                     <h1 id="hybrid-title">Art, worlds<br/>and software.</h1>
                     <div className="hybrid-hero-bottom">
                         <p>
@@ -30,33 +44,33 @@ export function HybridDemo() {
                     </div>
                 </div>
 
-                <Link className="hybrid-hero-art" to="/lore" aria-label="Explore Kaze's character lore">
+                <Link className="hybrid-hero-art" to={`/gallery/${heroArtwork.id}`} aria-label={`Open ${heroArtwork.title} in the gallery`}>
                     <img
-                        src={heroArtwork}
-                        alt="A blue, white and gold dragon character reaching toward the viewer"
-                        width={1191}
-                        height={2048}
+                        src={heroArtwork.webp}
+                        alt={`Artwork: ${heroArtwork.title}`}
+                        width={1200}
+                        height={1600}
                         fetchPriority="high"
                     />
                     <span className="hybrid-media-caption">
-                        <span>Character work</span>
-                        <span>Explore lore →</span>
+                        <span>{heroArtwork.title}</span>
+                        <span>Open gallery →</span>
                     </span>
                 </Link>
         </section>
 
         <section className="hybrid-work" aria-label="Featured work">
-                <Link className="hybrid-featured-art" to="/gallery">
+                <Link className="hybrid-featured-art" to={`/gallery/${featuredArtwork.id}`}>
                     <img
-                        src={featuredArtwork}
-                        alt="A close portrait of a teal dragon-shark character surrounded by digital fragments"
-                        width={1668}
-                        height={1668}
+                        src={featuredArtwork.webp}
+                        alt={`Artwork: ${featuredArtwork.title}`}
+                        width={1244}
+                        height={1200}
                         loading="lazy"
                     />
                     <span className="hybrid-media-caption hybrid-media-caption-on-image">
-                        <span>Character study</span>
-                        <span>Featured art →</span>
+                        <span>{featuredArtwork.title}</span>
+                        <span>Open gallery →</span>
                     </span>
                 </Link>
 
