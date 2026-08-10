@@ -20,9 +20,26 @@ const heroArtwork = findGalleryArtwork("A little tired");
 const featuredArtwork = findGalleryArtwork("C'mere");
 
 const indexLinks = [
-    {label: "Art", to: "/gallery"},
+    {label: "Gallery", to: "/gallery"},
     {label: "Projects", to: "/projects"},
-    {label: "Lore", to: "/lore"},
+    {label: "Characters", to: "/lore"},
+];
+
+const featuredProjects = [
+    {
+        name: "eous-web-v0",
+        description: "Personal website, currently running v0.1.",
+        language: "TypeScript",
+        type: "Personal website",
+        href: "https://github.com/kazeous/eous-web-v0",
+    },
+    {
+        name: "sona",
+        description: "Character reference page that makes commissioning artists easier.",
+        language: "JavaScript",
+        type: "Character reference",
+        href: "https://github.com/kazeous/sona",
+    },
 ];
 
 export function HybridDemo() {
@@ -79,19 +96,27 @@ export function HybridDemo() {
                     </span>
                 </Link>
 
-                <article className="hybrid-project-cell">
-                    <div>
-                        <p className="hybrid-cell-label">Current build</p>
-                        <h2>eous-web-v0</h2>
-                        <p>A React home for artwork, original worlds, and the software made along the way.</p>
-                    </div>
-                    <dl className="hybrid-project-meta">
-                        <div><dt>Stack</dt><dd>React / TypeScript</dd></div>
-                        <div><dt>Type</dt><dd>Personal web</dd></div>
-                        <div><dt>Status</dt><dd>In progress</dd></div>
-                    </dl>
-                    <Link className="hybrid-project-link" to="/projects">Open projects <span aria-hidden="true">→</span></Link>
-                </article>
+                {featuredProjects.map(project =>
+                    <article className="hybrid-project-cell" key={project.name}>
+                        <div>
+                            <h2>{project.name}</h2>
+                            <p>{project.description}</p>
+                        </div>
+                        <dl className="hybrid-project-meta">
+                            <div><dt>Language</dt><dd>{project.language}</dd></div>
+                            <div><dt>Type</dt><dd>{project.type}</dd></div>
+                        </dl>
+                        <a
+                            className="hybrid-project-link"
+                            href={project.href}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label={`Open ${project.name} on GitHub`}
+                        >
+                            Open on GitHub <span aria-hidden="true">↗</span>
+                        </a>
+                    </article>
+                )}
         </section>
 
         <section className="hybrid-index" aria-label="Explore the site">

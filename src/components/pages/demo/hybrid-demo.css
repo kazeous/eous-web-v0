@@ -4,6 +4,7 @@
  * contrast: pass (40–41) · nav: N9 · footer: Ft2 · slop: pass (42–45)
  * honest: pass (46) · chrome: pass (47) · tokens: pass (48) · responsive: pass (49)
  * icons: pass (30) · mobile: pass (34, 49, 50–57)
+ * knob-delta: work grid = 3 compact cells (was 2 large asymmetric cells)
  */
 @import "../../../../tokens.css";
 
@@ -189,13 +190,6 @@ body:has(.hybrid-demo) {
     border-right: var(--rule-hair) solid var(--color-rule);
 }
 
-.hybrid-cell-label {
-    color: var(--color-ink-2);
-    font-size: var(--text-sm);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-
 .hybrid-hero-heading {
     display: flex;
     min-width: 0;
@@ -313,8 +307,8 @@ body:has(.hybrid-demo) {
 
 .hybrid-work {
     display: grid;
-    min-height: 43rem;
-    grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
+    min-height: 29rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     margin: 0 !important;
     border-bottom: var(--rule-hair) solid var(--color-rule);
 }
@@ -336,14 +330,19 @@ body:has(.hybrid-demo) {
     padding: var(--space-xl);
     color: var(--color-ink);
     border: 0;
+    border-right: var(--rule-hair) solid var(--color-rule);
     border-radius: 0;
     background: var(--color-paper-2);
     box-shadow: none;
 }
 
+.hybrid-project-cell:last-child {
+    border-right: 0;
+}
+
 .hybrid-project-cell h2 {
-    margin-block: var(--space-xs) var(--space-sm);
-    font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl));
+    margin-block: 0 var(--space-sm);
+    font-size: clamp(var(--text-xl), 3vw, var(--text-2xl));
     line-height: 1;
 }
 
@@ -569,10 +568,14 @@ body:has(.hybrid-demo) {
     }
 
     .hybrid-hero,
-    .hybrid-work,
     .hybrid-index {
         min-height: auto;
         grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hybrid-work {
+        min-height: auto;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .hybrid-hero-copy,
@@ -597,11 +600,12 @@ body:has(.hybrid-demo) {
     }
 
     .hybrid-featured-art {
-        min-height: 34rem;
+        min-height: 26rem;
+        grid-column: 1 / -1;
     }
 
     .hybrid-project-cell {
-        min-height: 34rem;
+        min-height: 24rem;
         padding: var(--space-lg);
     }
 
@@ -613,6 +617,10 @@ body:has(.hybrid-demo) {
 @media (max-width: 40rem) {
     .hybrid-frame {
         width: calc(100% - (2 * var(--space-xs)));
+    }
+
+    .hybrid-work {
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .hybrid-wordmark,
@@ -664,6 +672,7 @@ body:has(.hybrid-demo) {
 
     .hybrid-featured-art {
         min-height: 25rem;
+        grid-column: auto;
     }
 
     .hybrid-media-caption {
@@ -672,8 +681,14 @@ body:has(.hybrid-demo) {
     }
 
     .hybrid-project-cell {
-        min-height: 31rem;
+        min-height: 20rem;
         padding: var(--space-md);
+        border-right: 0;
+        border-bottom: var(--rule-hair) solid var(--color-rule);
+    }
+
+    .hybrid-project-cell:last-child {
+        border-bottom: 0;
     }
 
     .hybrid-index-intro {

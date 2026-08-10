@@ -6,9 +6,9 @@ import {faBlog} from "@fortawesome/free-solid-svg-icons/faBlog";
 import "./site-shell.css";
 
 const navigation = [
-    {label: "Art", to: "/gallery"},
+    {label: "Gallery", to: "/gallery"},
     {label: "Projects", to: "/projects"},
-    {label: "Lore", to: "/lore"},
+    {label: "Characters", to: "/lore"},
     {label: "About", to: "/about"},
 ];
 
