@@ -1,3 +1,7 @@
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V4
+ * genre: editorial · macrostructure: Split Studio / Filter Rail · designed-as-app
+ * theme: studied-DNA (source: https://github.com/features/ai/github-app) · motion: none
+ */
 .gallery-page {
     width: 100%;
     padding: var(--space-xl) var(--space-lg) var(--space-2xl) !important;
@@ -13,9 +17,11 @@
 }
 
 .gallery-header h1 {
+    min-width: 0;
     margin: 0;
     font-size: var(--text-display);
     line-height: 1;
+    overflow-wrap: anywhere;
 }
 
 .gallery-header p {
@@ -25,16 +31,133 @@
     font-size: var(--text-md);
 }
 
+.gallery-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-xl);
+    align-items: start;
+    margin-block-start: var(--space-xl);
+}
+
+.gallery-filter-column,
+.gallery-results {
+    min-width: 0;
+}
+
 .gallery-filters {
-    margin: var(--space-xl) 0 !important;
+    min-width: 0;
+    margin: 0 !important;
     padding: var(--space-md) !important;
     border: var(--rule-hair) solid var(--color-rule) !important;
     background: var(--color-paper-2) !important;
+    color: var(--color-ink) !important;
+}
+
+.gallery-filters nav {
+    flex-wrap: wrap;
 }
 
 .gallery-filters legend {
     padding-inline: var(--space-xs);
     color: var(--color-ink-2);
+}
+
+.gallery-filter-count {
+    margin: 0 0 var(--space-md);
+    color: var(--color-ink-2);
+    font-size: var(--text-sm);
+    font-variant-numeric: tabular-nums;
+}
+
+.gallery-filter-control {
+    margin-block-end: var(--space-md);
+}
+
+.gallery-filter-label {
+    display: block;
+    margin-block-end: var(--space-xs);
+    font-weight: 700;
+}
+
+.gallery-artist-select {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    min-height: 2.75rem;
+    padding-inline: var(--space-sm);
+    border: var(--rule-hair) solid var(--color-rule);
+    border-radius: var(--radius-flat);
+    outline: 2px solid transparent;
+    outline-offset: 1px;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font: inherit;
+}
+
+.gallery-artist-select:hover {
+    background: var(--color-paper-3);
+}
+
+.gallery-artist-select:focus-visible {
+    outline-color: var(--color-focus);
+}
+
+.gallery-artist-select:active {
+    background: var(--color-paper-3);
+}
+
+.gallery-artist-select:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.gallery-character-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2xs);
+}
+
+.gallery-character-filter {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    gap: var(--space-2xs);
+    margin: 0 !important;
+    padding-inline: var(--space-sm);
+    border: var(--rule-hair) solid var(--color-rule) !important;
+    border-radius: var(--radius-flat) !important;
+    background: var(--color-paper) !important;
+    color: var(--color-ink) !important;
+    white-space: nowrap;
+}
+
+.gallery-character-filter:hover {
+    background: var(--color-paper-3) !important;
+}
+
+.gallery-character-filter:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+.gallery-character-filter:active {
+    background: var(--color-paper-3) !important;
+}
+
+.gallery-character-filter[aria-pressed="true"] {
+    background: var(--color-ink) !important;
+    color: var(--color-paper) !important;
+}
+
+.gallery-character-filter:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.gallery-character-check {
+    display: inline-block;
+    width: var(--space-sm);
+    line-height: 1;
 }
 
 .gallery-date {
@@ -45,8 +168,20 @@
     font-variant-numeric: tabular-nums;
 }
 
+.gallery-results > .gallery-month:first-child .gallery-date {
+    margin-block-start: 0;
+}
+
 .gallery-month {
     margin: 0;
+}
+
+.gallery-empty {
+    max-width: 65ch;
+    margin: 0;
+    padding-block: var(--space-xl);
+    border-block: var(--rule-hair) solid var(--color-rule);
+    color: var(--color-ink-2);
 }
 
 .gallery-page img {
@@ -70,7 +205,8 @@
     display: flex !important;
     height: auto !important;
     gap: 0 !important;
-    margin-block-end: var(--space-sm) !important;
+    justify-content: flex-start !important;
+    margin-block-end: 0 !important;
 }
 
 .gallery-pagination-button {
@@ -107,6 +243,12 @@
 @media (min-width: 48rem) {
     .gallery-header {
         grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    }
+}
+
+@media (min-width: 60rem) {
+    .gallery-layout {
+        grid-template-columns: minmax(15rem, 18rem) minmax(0, 1fr);
     }
 }
 
