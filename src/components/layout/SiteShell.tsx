@@ -81,8 +81,6 @@ export function SiteShell({children}: Readonly<{children: ReactNode}>) {
 
         <footer className="site-footer site-frame">
             <p>© {new Date().getFullYear()} Kazeous</p>
-            <p>Art and software, composed on one grid.</p>
-            <a href="https://github.com/kazeous" target="_blank" rel="noreferrer">GitHub ↗</a>
         </footer>
     </div>;
 }

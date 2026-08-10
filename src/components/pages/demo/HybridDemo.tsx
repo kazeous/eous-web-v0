@@ -34,8 +34,8 @@ export function HybridDemo() {
                     <h1 id="hybrid-title">Art, worlds<br/>and software.</h1>
                     <div className="hybrid-hero-bottom">
                         <p>
-                            A personal studio for the things Kaze draws, builds and keeps exploring.
-                            Amateur at everything—curious about all of it.
+                            Người ta vẫn thường nghĩ bình yên nằm ở cuối con đường. Nhưng đôi khi,
+                            bình yên là lúc ta thôi trách mình vì những điều đã cũ.
                         </p>
                         <div className="hybrid-actions" aria-label="Explore Kaze's work">
                             <Link className="hybrid-action hybrid-action-primary" to="/gallery">View art</Link>
